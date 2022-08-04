@@ -1,17 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.CommandLine;
+﻿using Producer;
 
-Console.WriteLine("Hello, World!");
+CliInput input = new CliInput
+{
+  Topic = args[0]
+};
 
-var fileOption = new Option<string>(
-            name: "--file",
-            description: "The file to read and display on the console.");
+if(args.Length == 1)
+  input.Message = new PipeReader().ProcessInput(Console.In.ReadToEnd());
 
-var rootCommand = new RootCommand("Sample app for System.CommandLine");
-rootCommand.AddOption(fileOption);
+else 
+  input.Message = new ArgsReader().ProcessInput(args);
 
-rootCommand.SetHandler((fileName) => {
-  Console.WriteLine(fileName);
-}, fileOption);
-
-return await rootCommand.InvokeAsync(args);
+Console.WriteLine(input);

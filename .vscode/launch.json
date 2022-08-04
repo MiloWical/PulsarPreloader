@@ -11,8 +11,10 @@
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/src/Producer/bin/Debug/net7.0/Producer.dll",
       "args": [
-        "--file",
-        "testinput.txt"
+        "mytopic",
+        "<",
+        "input"
+        //"inline message"
       ],
       "cwd": "${workspaceFolder}/src/Producer",
       "console": "internalConsole",
