@@ -11,4 +11,4 @@ if(args.Length == 1)
 else 
   input.Message = new ArgsReader().ProcessInput(args);
 
-Console.WriteLine(input);
+await MessagingClient.SendMessageAsync(input);

@@ -12,4 +12,8 @@
     <None Include="input" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DotPulsar" Version="2.4.0" />
+  </ItemGroup>
+
 </Project>

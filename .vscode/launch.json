@@ -11,7 +11,7 @@
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/src/Producer/bin/Debug/net7.0/Producer.dll",
       "args": [
-        "mytopic",
+        "persistent://public/default/msg-topic",
         "<",
         "input"
         //"inline message"
