@@ -1,11 +1,12 @@
 ﻿using Producer;
 
-CliInput input = new CliInput
+ProducerCliInput input = new ProducerCliInput
 {
-  Topic = args[0]
+  Host = args[0],
+  Topic = args[1]
 };
 
-if(args.Length == 1)
+if(args.Length == 2)
   input.Message = new PipeReader().ProcessInput(Console.In.ReadToEnd());
 
 else 

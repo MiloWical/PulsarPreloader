@@ -5,18 +5,34 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": ".NET Core Launch (console)",
+      "name": "Producer",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build",
+      "preLaunchTask": "build-producer",
       "program": "${workspaceFolder}/src/Producer/bin/Debug/net7.0/Producer.dll",
       "args": [
+        "localhost:6650",
         "persistent://public/default/msg-topic",
         "<",
         "input"
         //"inline message"
       ],
       "cwd": "${workspaceFolder}/src/Producer",
+      "console": "internalConsole",
+      "stopAtEntry": false
+    },
+    {
+      "name": "Consumer",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-consumer",
+      "program": "${workspaceFolder}/src/Consumer/bin/Debug/net7.0/Consumer.dll",
+      "args": [
+        "localhost:6650",
+        "persistent://public/default/msg-topic",
+        "Consumer"
+      ],
+      "cwd": "${workspaceFolder}/src/Consumer",
       "console": "internalConsole",
       "stopAtEntry": false
     },
