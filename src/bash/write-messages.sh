@@ -7,7 +7,7 @@ counter=1
 while [ $counter -le $1 ]
 do
   echo "$(generate_payload)" | \
-  $(dirname "$0")/../../src/Producer/bin/Debug/net7.0/Producer $2 $3
+  $(dirname "$0")/../Producer/bin/Debug/net7.0/Producer $2 $3
     
   ((counter++))
 done
