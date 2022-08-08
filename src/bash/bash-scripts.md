@@ -12,7 +12,7 @@ This file creates a payload that can be written to Pulsar. Currently, the payloa
 }
 ```
 
-This output is passed to `stdout` for further processing.
+where `<UUID>` is just a UUID, e.g. `72799ae2-de45-467c-bb34-bba937b6d53c`.  This output is passed to `stdout` for further processing.
 
 ## `write-messages.sh`
 
