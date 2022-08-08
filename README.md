@@ -20,7 +20,7 @@ This is useful for testing because the messages are immutable - if you need a fr
 
 ## Components
 
-There are a number of components that achieve this behavior:
+There are a number of components used to achieve this behavior:
 
 - **[Docker Files](./docker/docker.md)**: These files are used to run and build Pulsar containers.
 - **[Producer](./src/Producer/Producer.md)**: A program that can write a generated message to a Pulsar topic.
