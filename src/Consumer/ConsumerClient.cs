@@ -38,6 +38,10 @@ public class ConsumerClient
     {
       Console.Write($"[{i+1}] ");
       await ProcessMessageAsync(consumer, messages.Current!);
+      
+      // This blocking wait causes the application to hang on the last message.
+      if(i < messageCount - 1)
+        await messages.MoveNextAsync();
     }
   }
 

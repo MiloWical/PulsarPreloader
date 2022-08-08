@@ -1,0 +1,12 @@
+---
+version: '3'
+services:
+
+  # Pulsar config adapted from: https://pulsar.apache.org/docs/standalone-docker/#start-pulsar-in-docker
+  pulsar:
+    image: preloaded-pulsar:latest
+    container_name: preloaded-pulsar
+    ports:
+      - "6650:6650"
+      - "8080:8080"
+    command: [ "bin/pulsar", "standalone" ]

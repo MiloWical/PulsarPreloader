@@ -10,5 +10,5 @@ services:
       - "6650:6650"
       - "8080:8080"
     command: [ "bin/pulsar", "standalone" ]
-    # volumes:
-    #   - "./pulsar/data:/pulsar/data"
+    volumes:
+      - "../data/pulsar/data:/pulsar/data"
