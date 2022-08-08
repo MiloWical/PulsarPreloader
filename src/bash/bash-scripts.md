@@ -8,7 +8,7 @@ This file creates a payload that can be written to Pulsar. Currently, the payloa
 
 ```json
 {
-  "id": "<UUID"
+  "id": "<UUID>"
 }
 ```
 
